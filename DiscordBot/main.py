@@ -63,5 +63,11 @@ client = commands.Bot(command_prefix=get_prefix, help_command=commands.MinimalHe
 
 ###Moderation CMDS...
 for filename in os.listdir('./cogs/lib/Moderation'): 
-  if filename.endswith('.py'):
-    client.load_extension(f'cogs.{filename[:-3]}')
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.{filename[:-3]}')
+
+### Fun CMDS...
+for filename in os.listdir('./cog/lib/Fun'):
+    if filename.endswith('.py'):
+        client.load_extension(f'cogs.lib.fun.{filename[:-3]}')
+
